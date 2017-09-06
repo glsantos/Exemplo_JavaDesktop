@@ -1,0 +1,23 @@
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Eai World!");
+		
+		ContaPremium c = new ContaPremium();
+		c.setCliente("Gabriel Santos");
+		//Depositando na Conta do Cliente
+		c.deposito(500d);
+		
+		c.visualizarSaldo();
+		
+		//saque
+		c.saque(200d);
+		c.visualizarSaldo();
+		
+		c.saque(600d);
+		c.visualizarSaldo();
+	}
+}
+

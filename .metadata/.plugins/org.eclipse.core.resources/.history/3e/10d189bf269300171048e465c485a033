@@ -1,0 +1,31 @@
+
+public class ContaPremium extends Conta{
+	
+	private Double limite=500d;
+	
+	@Override
+	public Double saque(Double valor){
+		
+		if(valor > saldo){
+			
+			Double diferenca = valor - saldo;
+			saldo = 0;
+			
+			if(limite >= diferenca){
+				
+				saldo=0;
+				limite -= diferenca;
+			}else{
+				
+				return 0d;
+			}
+		}else{
+			
+			super.saque(valor);
+		}
+		
+		return 0d;
+	}
+
+		
+}

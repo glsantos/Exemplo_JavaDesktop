@@ -1,0 +1,20 @@
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Eai World!");
+		
+		Conta c = new Conta();
+		c.setCliente("Gabriel Santos");
+		//Depositando na Conta do Cliente
+		c.setSaldo(500.0);
+		
+		c.visualizarSaldo();
+		
+		//saque
+		c.setSaldo(c.getSaldo() - 200);
+		c.visualizarSaldo();
+	}
+}
+

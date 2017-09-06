@@ -1,0 +1,13 @@
+
+public class ContaPremium extends Conta{
+	
+	private Double limite=500d;
+	
+	@Override
+	public Double saque(Double valor){
+		
+		
+	}
+
+		
+}

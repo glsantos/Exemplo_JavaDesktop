@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Eai World!");
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite a senha:");
+		String senha = sc.nextLine();
+		
+		if(senha.equals("123")){	
+			
+			ContaPremium c = new ContaPremium();
+			c.setCliente("Gabriel Santos");
+		}else{
+			
+			Conta c = new Conta();
+			c.setCliente("Gabriel Santos");
+		}
+		
+		
+		
+		
+		//Depositando na Conta do Cliente
+		c.deposito(500d);
+		c.visualizarSaldo();
+		//Sacando um valor d na conta do Cliente
+		c.saque(200d);
+		c.saque(600d);
+		
+		c.visualizarSaldo();
+	}
+}
+

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class App {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Eai World!");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		ContaPremium c = new ContaPremium();
+		c.setCliente("Gabriel Santos");
+		
+		
+		//Depositando na Conta do Cliente
+		c.deposito(500d);
+		c.visualizarSaldo();
+		//Sacando um valor d na conta do Cliente
+		c.saque(200d);
+		c.saque(600d);
+		
+		c.visualizarSaldo();
+	}
+}
+

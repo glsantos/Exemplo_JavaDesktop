@@ -1,0 +1,39 @@
+
+public class ContaPremium extends Conta{
+	
+	private Double limite=500d;
+	
+	@Override
+	public void visualizarSaldo() {
+		
+		System.out.println("CONTA PREMUI DE "+ getCliente());
+		System.out.println("O saldo disponível é: R$ " + saldo);
+		System.out.println("O limite disponivel é: R$ " + limite);
+		
+	}
+	
+	
+	@Override
+	public Double saque(Double valor){
+		
+		if(valor > saldo){
+			
+			Double diferenca = valor - saldo;
+			
+			if(limite >= diferenca){
+				
+				saldo=  0d;
+				limite -= diferenca;
+				return valor;
+			}else{
+				
+				return 0d;
+			}
+		}else{
+			
+			super.saque(valor);
+		}
+		
+		return 0d;
+	}
+}
