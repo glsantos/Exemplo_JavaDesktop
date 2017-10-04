@@ -1,0 +1,30 @@
+
+
+//FakeDao dao = FakeDao.getInstance();
+
+public class FakeDao {
+	
+	private static FakeDao instance;
+	
+	public static FakeDao getInstance(){
+		
+		if(instance == null){
+			
+			instance = new FakeDao();
+			
+			
+		}
+		return instance;
+		
+	}
+		
+		public void Inserir(){
+			
+			
+		}
+		
+		public void Atualizar(){
+			
+		}
+	
+}
